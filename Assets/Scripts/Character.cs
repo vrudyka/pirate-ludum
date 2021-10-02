@@ -9,7 +9,8 @@ public class Character : MonoBehaviour
     [SerializeField] private SpriteRenderer renderer;
 
     // State.
-    public CharacterState characterStateBackingField;
+    private CharacterState characterStateBackingField;
+    private AbstractCharacterAction actionExecuter;
 
     // Input.
     private Vector2 movementDirection;
@@ -29,17 +30,29 @@ public class Character : MonoBehaviour
             switch (characterStateBackingField)
             {
                 case CharacterState.Destructive:
-                    color = Color.red;
-                    break;
+                    {
+                        color = Color.red;
+                        actionExecuter = new Destructive();
+                        break;
+                    }
                 case CharacterState.Builder:
-                    color = Color.blue;
-                    break;
+                    {
+                        color = Color.blue;
+                        actionExecuter = new Builder();
+                        break;
+                    }
                 case CharacterState.Enlarger:
-                    color = Color.magenta;
-                    break;
+                    {
+                        color = Color.magenta;
+                        actionExecuter = new Enlarger();
+                        break;
+                    }
                 case CharacterState.Stupid:
-                    color = Color.yellow;
-                    break;
+                    {
+                        color = Color.yellow;
+                        actionExecuter = new Stupid();
+                        break;
+                    }
             }
 
             renderer.color = color;
@@ -65,6 +78,8 @@ public class Character : MonoBehaviour
     {
         Walk();
 
+        actionExecuter.UpdateAction();
+
         if (mouseDown)
             Die();
     }
@@ -72,7 +87,7 @@ public class Character : MonoBehaviour
     private void LateUpdate()
     {
         movementDirection.x = Input.GetAxis("Horizontal");
-		movementDirection.y = Input.GetAxis("Vertical");
+        movementDirection.y = Input.GetAxis("Vertical");
 
         mouseDown = Input.GetMouseButtonDown(0);
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -84,12 +99,16 @@ public class Character : MonoBehaviour
         Vector3 displacement = velocity * Time.deltaTime * speed;
         transform.localPosition += displacement;
     }
+
+    private void ExecuteStateAction()
+    {
+    }
 }
 
 public enum CharacterState
 {
-    Destructive, 
-    Builder, 
+    Destructive,
+    Builder,
     Enlarger,
     Stupid,
 
