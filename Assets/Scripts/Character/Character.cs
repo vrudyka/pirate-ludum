@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -66,6 +67,8 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         CharacterState = RandomState();
     }
 
@@ -81,7 +84,9 @@ public class Character : MonoBehaviour
         actionExecuter.UpdateAction();
 
         if (mouseDown)
-            Die();
+        {
+            ////SceneManager.LoadScene("Batya");
+        }
     }
 
     private void LateUpdate()
