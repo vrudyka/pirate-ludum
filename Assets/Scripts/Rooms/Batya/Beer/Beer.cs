@@ -17,6 +17,11 @@ namespace Assets.Scripts.Rooms.Batya.Beer
             RandomlyRotateBeer();
         }
 
+        public void DestroyBeer()
+        {
+            Destroy(gameObject);
+        }
+
         private void ScaleBeerAccordingToVolume(int beerVolume)
         {
             var beerScale = transform.localScale;
