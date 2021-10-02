@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2848531538928319428}
   - component: {fileID: 2848531538928319429}
   - component: {fileID: 2848531538928319450}
+  - component: {fileID: 7694743805198419853}
   m_Layer: 0
   m_Name: Batya
   m_TagString: Untagged
@@ -99,3 +100,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7694743805198419853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2848531538928319451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd59fb588cad0d43b4fedfd3387b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chasingSpeed: 0
