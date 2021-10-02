@@ -6,6 +6,5 @@ public class Builder : AbstractCharacterAction
 {
     public override void UpdateAction()
     {
-        Debug.Log($"Builder doing stuff");
     }
 }

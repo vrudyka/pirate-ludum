@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class Character : MonoBehaviour
 {
@@ -14,9 +11,9 @@ public class Character : MonoBehaviour
     private AbstractCharacterAction actionExecuter;
 
     // Input.
-    private Vector2 movementDirection;
-    private Vector2 mousePos;
-    private bool mouseDown;
+    public Vector2 movementDirection;
+    public Vector2 mousePos;
+    public bool mouseDown;
 
     public CharacterState CharacterState
     {
