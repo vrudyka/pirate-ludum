@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7936336877230669697}
   - component: {fileID: 7936336877230669696}
   - component: {fileID: 7936336877230669699}
+  - component: {fileID: -6660514941933822720}
   m_Layer: 0
   m_Name: Beer
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7936336877230669698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.4, z: 1}
+  m_LocalScale: {x: 2, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,3 +110,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6660514941933822720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936336877230669698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f75a8095a8ab1194ea56cc468b8c51fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minBeerVolume: 1
+  _maxBeerVolume: 10
+  _minBeerScale: {x: 0.2, y: 0.3, z: 1}
+  _maxBeerScale: {x: 2, y: 3, z: 1}
+  _scaleModifier: 0.5
