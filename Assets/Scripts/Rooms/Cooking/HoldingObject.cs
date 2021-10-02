@@ -13,6 +13,9 @@ public class HoldingObject : MonoBehaviour
             return;
 
         Highlight.SetActive(isActive);
+
+        var collider = gameObject.GetComponent<Collider2D>();
+        collider.enabled = isActive;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class FlyingParticle : MonoBehaviour
 {
+    public Condiment type;
+
     public float speed;
 
     private Vector3 displacement;
@@ -34,4 +36,10 @@ public class FlyingParticle : MonoBehaviour
         var velocity = new Vector3(normalizedDir.x, normalizedDir.y, 0f);
         displacement = velocity * speed;
     }
+}
+
+public enum Condiment
+{
+    Salt, 
+    Sugar
 }

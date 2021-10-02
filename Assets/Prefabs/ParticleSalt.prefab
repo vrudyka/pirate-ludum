@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6894607025999863456}
   - component: {fileID: 15465251836848837}
   m_Layer: 8
-  m_Name: Particle
+  m_Name: ParticleSalt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1312f1be149ad8f4b88f9246257187fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   speed: 10
 --- !u!61 &15465251836848837
 BoxCollider2D:

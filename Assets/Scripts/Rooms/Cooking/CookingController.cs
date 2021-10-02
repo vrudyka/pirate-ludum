@@ -37,9 +37,11 @@ public class CookingController : MonoBehaviour
     private void Awake()
     {
         character = FindObjectOfType<Character>();
+
+        NextInQueue();
     }
 
-    private void NextInQueue()
+    public void NextInQueue()
     {
         foreach (var obj in queueThings)
         {
