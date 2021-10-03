@@ -23,6 +23,11 @@ public class Character : MonoBehaviour
         {
             characterStateBackingField = value;
 
+            if (spriteRenderer == null)
+            {
+                return;
+            }
+
             var color = Color.white;
 
             switch (characterStateBackingField)
@@ -78,7 +83,7 @@ public class Character : MonoBehaviour
     {
         Walk();
 
-        actionExecuter.UpdateAction();
+        //actionExecuter.UpdateAction();
 
         if (mouseDown)
         {
