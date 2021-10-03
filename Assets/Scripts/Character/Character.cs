@@ -15,6 +15,8 @@ public class Character : MonoBehaviour
     public Vector2 mousePos;
     public bool mouseDown;
 
+    public static Character Instance = null;
+
     public CharacterState CharacterState
     {
         get => characterStateBackingField;
@@ -69,9 +71,21 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-
         CharacterState = RandomState();
+    }
+
+    private void Start()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private CharacterState RandomState()
