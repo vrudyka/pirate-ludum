@@ -14,6 +14,7 @@ public class BatyaCharacterCatching : MonoBehaviour
         if (collidedGameObject.CompareTag("Player"))
         {
             Destroy(collidedGameObject);
+            SceneController.Instance.ReloadCurrentScene();
             OnPlayerCaught();
         }
     }
