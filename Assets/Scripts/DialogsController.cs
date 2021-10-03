@@ -20,8 +20,8 @@ public class DialogsController : MonoBehaviour
     public void DisplayPhrase(string phraseImageName, Vector3 displayPosition, Image phraseDisplayer)
     {
         _phraseDisplay = phraseDisplayer;
-        _phraseDisplay.gameObject.SetActive(true);
-        _phraseDisplay.gameObject.transform.position = displayPosition;
+        _phraseDisplay.gameObject.transform.parent.gameObject.SetActive(true);
+        _phraseDisplay.gameObject.transform.parent.position = displayPosition;
 
         foreach (var image in _phrasesImages)
         {
@@ -38,7 +38,7 @@ public class DialogsController : MonoBehaviour
 
     public void StopDisplayingPhrases()
     {
-        _phraseDisplay.gameObject.SetActive(false);
+        _phraseDisplay.gameObject.transform.parent.gameObject.SetActive(false);
        // OnDialogFinished();
     }
 
