@@ -12,7 +12,7 @@ public class GarbageScript : MonoBehaviour
     {
         if (collision.transform.tag == "Garbege") 
         {
-            garbegeCount += 1;
+            garbegeCount = this.garbegeCount + 1;
             textGarbage.text = garbegeCount.ToString();
             Destroy(collision.gameObject);
         }
