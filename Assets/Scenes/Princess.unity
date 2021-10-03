@@ -223,6 +223,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7051609303326961354, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_Name
+      value: FirstDialogPhraseDisplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051609303326961354, guid: 237e58190a2afd04a900319db47df004, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -248,7 +252,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 257161157358165417, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 257161157358165417, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -295,6 +299,10 @@ PrefabInstance:
       value: FirstDialog
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phraseDisplay
+      value: 
+      objectReference: {fileID: 291602619}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
       value: 500
       objectReference: {fileID: 0}
@@ -340,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6141783718760815857, guid: 34b9b407b2f02f34ea79305a49f78ccc, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6141783718760815857, guid: 34b9b407b2f02f34ea79305a49f78ccc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -613,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 75fe1c41caf8e914f8db234415268d1d, type: 3}
     - target: {fileID: 2094924247750378283, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2094924247750378283, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -657,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353902931414521050, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: m_Name
-      value: DialogHandler
+      value: DialogProvider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
@@ -925,7 +933,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3819387536759645133, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3819387536759645133, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4810084771479274049, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: m_Name
-      value: DialogTrigger
+      value: FirstDialogTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 5245801730310311027, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: _dialogToStart
@@ -1155,7 +1163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021750928
 GameObject:

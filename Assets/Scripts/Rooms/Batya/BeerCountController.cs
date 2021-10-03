@@ -5,6 +5,8 @@ using UnityEngine;
 public class BeerCountController : MonoBehaviour
 {
     [SerializeField] private Transform _allBeerContainer;
+    [SerializeField] private Dialog _afterFightDialog;
+    [SerializeField] private GameObject _sceneChangeTrigger;
 
     private float _currentBeerVolume;
 
@@ -23,6 +25,8 @@ public class BeerCountController : MonoBehaviour
         _totalBeerBottlesAmount = _allBeerContainer.childCount;
         BeerProjectile.OnBeerBroken += IncreaseDestroyedBeerBottlesAmount;
         BeerProjectile.OnBeerBroken += CheckIsAllBeerBottlesDestroyed;
+        BatyaBeerCatching.OnBeerCaught += IncreaseDestroyedBeerBottlesAmount;
+        BatyaBeerCatching.OnBeerCaught += CheckIsAllBeerBottlesDestroyed;
         BatyaBeerCatching.OnBeerCaught += IncreaseCurrentBeerVolume;
     }
 
@@ -36,6 +40,8 @@ public class BeerCountController : MonoBehaviour
         if (_destroyedBeerBottlesAmount >= _totalBeerBottlesAmount)
         {
             OnAllBeerDestroyed();
+            _afterFightDialog.StartDialog();
+            _sceneChangeTrigger.SetActive(true);
         }
     }
 
@@ -50,5 +56,8 @@ public class BeerCountController : MonoBehaviour
     {
         BeerProjectile.OnBeerBroken -= IncreaseDestroyedBeerBottlesAmount;
         BeerProjectile.OnBeerBroken -= CheckIsAllBeerBottlesDestroyed;
+        BatyaBeerCatching.OnBeerCaught -= IncreaseDestroyedBeerBottlesAmount;
+        BatyaBeerCatching.OnBeerCaught -= CheckIsAllBeerBottlesDestroyed;
+        BatyaBeerCatching.OnBeerCaught -= IncreaseCurrentBeerVolume;
     }
 }
