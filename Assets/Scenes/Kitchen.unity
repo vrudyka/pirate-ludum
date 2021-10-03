@@ -1787,6 +1787,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   garbegeCount: 0
   textGarbage: {fileID: 543572311}
+--- !u!212 &1414740531 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5976806557144910667, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
+  m_PrefabInstance: {fileID: 1521723424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1424393608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2086,14 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2491039026044415897, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976806557144910660, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1414740531}
     - target: {fileID: 5976806557144910661, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
       propertyPath: m_Name
       value: Character
