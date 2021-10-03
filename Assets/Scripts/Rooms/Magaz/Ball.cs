@@ -19,6 +19,7 @@ public class Ball : MonoBehaviour
     private Vector2 savedVelocity;
     private Vector2 startingPos;
     private int collectedItems;
+    private int spoiledItems;
     Rigidbody2D rigidbody;
 
     void Start()
@@ -40,6 +41,8 @@ public class Ball : MonoBehaviour
 
             rigidbody.velocity = movementDirection * Time.deltaTime * speed;
         }
+
+        collectedItemsText.text = $"{collectedItems}/7";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -54,6 +57,13 @@ public class Ball : MonoBehaviour
 
         rigidbody.velocity = new Vector2(rigidbody.velocity.x, savedVelocity.y);
         savedVelocity.y /= BounceRate;
+
+        if (collision.gameObject.CompareTag("Goods"))
+        {
+            collectedItems++;
+            spoiledItems = collision.gameObject.GetComponent<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
+            Destroy(collision.gameObject);
+        }
 
         if (collision.gameObject.tag == "verticalWall")
         {
@@ -82,8 +92,8 @@ public class Ball : MonoBehaviour
         if (collider.gameObject.tag == "Goods")
         {
             collectedItems++;
+            spoiledItems = collider.gameObject.GetComponent<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
             Destroy(collider.gameObject);
-            collectedItemsText.text = collectedItems.ToString();
         }
     }
 

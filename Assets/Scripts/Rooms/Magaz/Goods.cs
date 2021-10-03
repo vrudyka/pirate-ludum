@@ -11,6 +11,7 @@ public class Goods : MonoBehaviour
     [SerializeField] private int spoilCoef;
 
     private float spoiledTimer;
+    public bool isSpoiled;
 
     private void Awake()
     {
@@ -21,5 +22,10 @@ public class Goods : MonoBehaviour
     {
         spoiledTimer -= (Time.deltaTime * spoilCoef);
         goodsColor.color = new Color(255/255f, spoiledTimer/255f, spoiledTimer/255f, 255/255f);
+
+        if (spoiledTimer <= 0)
+        {
+            isSpoiled = true;
+        }
     }
 }
