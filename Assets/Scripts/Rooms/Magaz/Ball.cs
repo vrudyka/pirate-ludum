@@ -108,7 +108,7 @@ public class Ball : MonoBehaviour
         if (collider.gameObject.tag == "Goods")
         {
             collectedItems++;
-            spoiledItems = collider.gameObject.GetComponent<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
+            spoiledItems = collider.gameObject.GetComponentInChildren<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
             Destroy(collider.gameObject);
 
             if (collectedItems == 7)
