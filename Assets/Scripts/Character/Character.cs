@@ -10,6 +10,8 @@ public class Character : MonoBehaviour
     private CharacterState characterStateBackingField;
     private AbstractCharacterAction actionExecuter;
 
+    private Rigidbody2D _rigidbody2d;
+
     // Input.
     public Vector2 movementDirection;
     public Vector2 mousePos;
@@ -17,6 +19,7 @@ public class Character : MonoBehaviour
 
     public bool _isCanMove;
 
+    
     public static Character Instance = null;
 
 
@@ -27,7 +30,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        
+        _rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -77,6 +80,7 @@ public class Character : MonoBehaviour
     private void BanMove()
     {
         _isCanMove = false;
+        _rigidbody2d.velocity = Vector2.zero;
     }
 
     private void LateUpdate()
@@ -92,7 +96,7 @@ public class Character : MonoBehaviour
     {
         Vector3 velocity = new Vector3(movementDirection.x, movementDirection.y, 0f);
         Vector3 displacement = velocity * speed;
-        GetComponent<Rigidbody2D>().velocity = displacement;
+        _rigidbody2d.velocity = displacement;
     }
 
     private void ExecuteStateAction()
