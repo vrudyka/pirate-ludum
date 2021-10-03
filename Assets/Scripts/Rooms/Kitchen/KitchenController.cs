@@ -24,16 +24,16 @@ public class KitchenController : MonoBehaviour
         childrenSpawnArea = GameObject.FindGameObjectWithTag("SpawnZone").GetComponent<Collider2D>();
         garbageSpawnArea = GameObject.FindGameObjectWithTag("Floor").GetComponent<Collider2D>();
 
-        lostChildScript = GameObject.FindGameObjectWithTag("LostChild").GetComponent<LostChildScript>();
-        garbageScript = GameObject.FindGameObjectWithTag("Player").GetComponent<GarbageScript>();
-
         SpawnObjectives(childPrefab, childrenSpawnArea, childrenCount);
         SpawnObjectives(garbagePrefab, garbageSpawnArea, garbageAmount);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        if (this.garbageScript.garbegeCount > 2 && this.lostChildScript.IsFoud == true)
+        lostChildScript = GameObject.FindGameObjectWithTag("LostChild").GetComponent<LostChildScript>();
+        garbageScript = GameObject.FindGameObjectWithTag("Player").GetComponent<GarbageScript>();
+
+        if (garbageScript.garbegeCount > 2 && this.lostChildScript.IsFoud == true)
         {
             Debug.Log("VICTORY!!!");
         }
