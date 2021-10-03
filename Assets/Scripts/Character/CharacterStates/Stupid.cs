@@ -6,6 +6,6 @@ public class Stupid : AbstractCharacterAction
 {
     public override void UpdateAction()
     {
-        Debug.Log($"Stupid doing stuff");
+        // Debug.Log($"Stupid doing stuff");
     }
 }
