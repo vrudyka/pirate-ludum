@@ -17,6 +17,7 @@ TagManager:
   - Garbege
   - Borders
   - LostChild
+  - LostChildArea
   layers:
   - Default
   - TransparentFX
