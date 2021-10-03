@@ -3,14 +3,14 @@ using UnityEngine;
 public class BeerThrow : MonoBehaviour
 {
     [SerializeField] private GameObject _throwableBeerPrefab;
+    [SerializeField] private GameObject _beerInHand;
     [SerializeField] private float _throwForce;
 
     private Rigidbody2D _rigidbody2D;
     private bool _isBeerCanBeThrown;
     private Camera _camera;
 
-    public delegate void BeerThrown();
-
+    public delegate void BeerThrown(GameObject beer);
     public static event BeerThrown OnBeerThrown = delegate { };
 
     private void Start()
@@ -28,7 +28,6 @@ public class BeerThrow : MonoBehaviour
             {
                 ThrowBeer(Input.mousePosition);
                 BanBeerThrowing();
-                OnBeerThrown();
             }
         }
     }
@@ -39,11 +38,16 @@ public class BeerThrow : MonoBehaviour
         var mousePositionWithCharacterZ = new Vector3(mousePositionInWorldPoints.x, mousePositionInWorldPoints.y, transform.position.z);
         var throwDirection = (mousePositionWithCharacterZ - transform.position).normalized;
         var beer = Instantiate(_throwableBeerPrefab, transform.position, Quaternion.identity);
+        beer.transform.localScale = _beerInHand.transform.localScale;
+        var beerProjectileComponent = beer.GetComponent<BeerProjectile>();
+        beerProjectileComponent.BeerVolume = ScaleToVolumeConverter.VolumeFromXScaleValue(beer.transform.localScale.x);
         var beerRigidBody2d = beer.GetComponent<Rigidbody2D>(); 
         beerRigidBody2d.AddForce(throwDirection * _throwForce, ForceMode2D.Impulse);
+
+        OnBeerThrown(beer);
     }
 
-    private void AllowBeerThrowing()
+    private void AllowBeerThrowing(GameObject beer)
     {
         _isBeerCanBeThrown = true;
     }

@@ -7,7 +7,7 @@ public class BatyaBeerCatching : MonoBehaviour
 {
     private bool _isBeerCatchingAllowed;
 
-    public delegate void BeerCaught();
+    public delegate void BeerCaught(GameObject beer);
     public static event BeerCaught OnBeerCaught = delegate { };
 
     private void Start()
@@ -19,14 +19,13 @@ public class BatyaBeerCatching : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
-        Debug.LogError(collider2D.tag);
-
         if (_isBeerCatchingAllowed)
         {
             if (collider2D.CompareTag("BeerProjectile"))
             {
-                Destroy(collider2D.gameObject);
-                OnBeerCaught();
+                var beerGameObject = collider2D.gameObject;
+                OnBeerCaught(beerGameObject);
+                Destroy(beerGameObject);
             }
         }
     }

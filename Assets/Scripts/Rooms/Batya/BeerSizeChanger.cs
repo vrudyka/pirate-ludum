@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BeerSizeChanger : MonoBehaviour
 {
@@ -10,12 +9,16 @@ public class BeerSizeChanger : MonoBehaviour
     [SerializeField] private Vector3 _maxBeerScale;
     [SerializeField] private float _scalingRate;
 
+    private float _beerVolume;
     private bool _isBeerSizeCanBeChanged;
 
     private void Start()
     {
+        SetupBeerVolume();
         AllowBeerSizeChanging();
         BeerPickUp.OnBeerPickedInHand += BanBeerSizeChanging;
+        BeerProjectile.OnBeerBroken += AllowBeerSizeChanging;
+        BatyaBeerCatching.OnBeerCaught += AllowBeerSizeChanging;
     }
 
     private void OnMouseOver()
@@ -29,6 +32,10 @@ public class BeerSizeChanger : MonoBehaviour
             else if (Input.GetMouseButton(1))
             {
                 ScaleBeerDownRoutine();
+            }
+            else if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+            {
+                SetupBeerVolume();
             }
         }
     }
@@ -50,12 +57,23 @@ public class BeerSizeChanger : MonoBehaviour
         transform.localScale = Vector3.Lerp(transform.localScale, _minBeerScale, _scalingRate * Time.deltaTime);
     }
 
+    private void SetupBeerVolume()
+    {
+        var currentScale = transform.localScale;
+        _beerVolume = ScaleToVolumeConverter.VolumeFromXScaleValue(currentScale.x);
+    }
+
+    private void AllowBeerSizeChanging(GameObject beer)
+    {
+        _isBeerSizeCanBeChanged = true;
+    }
+
     private void AllowBeerSizeChanging()
     {
         _isBeerSizeCanBeChanged = true;
     }
 
-    private void BanBeerSizeChanging()
+    private void BanBeerSizeChanging(GameObject beer)
     {
         _isBeerSizeCanBeChanged = false;
     }
@@ -63,5 +81,7 @@ public class BeerSizeChanger : MonoBehaviour
     private void OnDisable()
     {
         BeerPickUp.OnBeerPickedInHand -= BanBeerSizeChanging;
+        BeerProjectile.OnBeerBroken -= AllowBeerSizeChanging;
+        BatyaBeerCatching.OnBeerCaught -= AllowBeerSizeChanging;
     }
 }

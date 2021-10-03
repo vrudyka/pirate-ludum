@@ -11,12 +11,23 @@ public class BeerInHand : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         DisableBeerIcon();
         BeerPickUp.OnBeerPickedInHand += EnableBeerIcon;
+        BeerPickUp.OnBeerPickedInHand += ScaleBeer;
         BeerThrow.OnBeerThrown += DisableBeerIcon;
     }
 
-    private void EnableBeerIcon()
+    private void ScaleBeer(GameObject beer)
+    {
+        transform.localScale = beer.transform.localScale;
+    }
+
+    private void EnableBeerIcon(GameObject beer)
     {
         _spriteRenderer.enabled = true;
+    }
+
+    private void DisableBeerIcon(GameObject beer)
+    {
+        _spriteRenderer.enabled = false;
     }
 
     private void DisableBeerIcon()
@@ -27,6 +38,7 @@ public class BeerInHand : MonoBehaviour
     private void OnDisable()
     {
         BeerPickUp.OnBeerPickedInHand -= EnableBeerIcon;
+        BeerPickUp.OnBeerPickedInHand -= ScaleBeer;
         BeerThrow.OnBeerThrown -= DisableBeerIcon;
     }
 }
