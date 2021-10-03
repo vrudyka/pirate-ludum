@@ -6,6 +6,5 @@ public class Enlarger : AbstractCharacterAction
 {
     public override void UpdateAction()
     {
-        // Debug.Log($"Enlarger doing stuff");
     }
 }

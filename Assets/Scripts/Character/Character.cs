@@ -1,22 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class Character : MonoBehaviour
 {
     // Inspector stuff.
     [SerializeField] private float speed;
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // State.
     private CharacterState characterStateBackingField;
     private AbstractCharacterAction actionExecuter;
 
     // Input.
-    private Vector2 movementDirection;
-    private Vector2 mousePos;
-    private bool mouseDown;
+    public Vector2 movementDirection;
+    public Vector2 mousePos;
+    public bool mouseDown;
+
+    public static Character Instance = null;
 
     public CharacterState CharacterState
     {
@@ -25,6 +24,11 @@ public class Character : MonoBehaviour
         set
         {
             characterStateBackingField = value;
+
+            if (spriteRenderer == null)
+            {
+                return;
+            }
 
             var color = Color.white;
 
@@ -56,7 +60,7 @@ public class Character : MonoBehaviour
                     }
             }
 
-            renderer.color = color;
+            spriteRenderer.color = color;
         }
     }
 
@@ -67,9 +71,19 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-
         CharacterState = RandomState();
+    }
+
+    private void Start()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private CharacterState RandomState()
@@ -81,7 +95,7 @@ public class Character : MonoBehaviour
     {
         Walk();
 
-        actionExecuter.UpdateAction();
+        //actionExecuter.UpdateAction();
 
         if (mouseDown)
         {

@@ -4,21 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SpawnZone
-  - MotherArea
-  - MotherAI
-  - Floor
+  - verticalWall
+  - horizontalWall
+  - spereCollider
+  - Goods
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Character
   - Water
   - UI
+  - shelves
   - 
-  - 
-  - 
-  - 
+  - CookingThings
+  - CookingCharacter
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 660628723
     locked: 0
