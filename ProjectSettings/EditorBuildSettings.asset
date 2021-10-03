@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Princess.unity
     guid: 4f2ccb2d36a52074188885265c035ec9
+  - enabled: 1
+    path: Assets/Scenes/Princess 1.unity
+    guid: 4c701402ccd8b3849b9e4d35c66078b6
   m_configObjects: {}

@@ -232,9 +232,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237e58190a2afd04a900319db47df004, type: 3}
---- !u!114 &291602619 stripped
+--- !u!114 &19786200 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7988503034105802595, guid: 237e58190a2afd04a900319db47df004, type: 3}
+  m_CorrespondingSourceObject: {fileID: 671895679, guid: 237e58190a2afd04a900319db47df004, type: 3}
   m_PrefabInstance: {fileID: 19786199}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -301,14 +301,14 @@ PrefabInstance:
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phraseDisplay
       value: 
-      objectReference: {fileID: 291602619}
+      objectReference: {fileID: 19786200}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
-      value: 500
+      value: 1650
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.y
-      value: 500
+      value: 675
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.z
@@ -402,7 +402,7 @@ PrefabInstance:
     - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: _phraseDisplay
       value: 
-      objectReference: {fileID: 291602619}
+      objectReference: {fileID: 0}
     - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: _phrasesImages.Array.size
       value: 1
