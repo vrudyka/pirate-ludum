@@ -37,7 +37,6 @@ public enum HoldingObjectType
     Sugar,
     Fork,
     Masher,
-    Fire,
     Pan,
     Switch
 }

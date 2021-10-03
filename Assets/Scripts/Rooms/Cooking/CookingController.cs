@@ -29,16 +29,27 @@ public class CookingController : MonoBehaviour
     public GameObject cursor;
 
     public List<HoldingObjectStuff> queueThings;
-    private int queueNumber;
+    public int queueNumber;
 
     private Character character;
-    private GameObject holdingObj;
+    public GameObject holdingObj;
+
+    public FireSwitch fireSwitch;
 
     private void Awake()
     {
         character = FindObjectOfType<Character>();
 
+        fireSwitch.switched += FireSwitchSwitched;
+
         NextInQueue();
+    }
+
+    private void FireSwitchSwitched()
+    {
+        NextInQueue();
+
+        // Fireeee
     }
 
     public void NextInQueue()
@@ -51,6 +62,11 @@ public class CookingController : MonoBehaviour
         queueThings[queueNumber].obj.SetHighlight(true);
 
         queueNumber++;
+    }
+
+    public void Winnn()
+    {
+
     }
 
     private void Update()
@@ -77,7 +93,8 @@ public class CookingController : MonoBehaviour
                 return;
 
             if (holdingObjComp.type == HoldingObjectType.Bowl ||
-                holdingObjComp.type == HoldingObjectType.Fire)
+                holdingObjComp.type == HoldingObjectType.Switch ||
+                holdingObjComp.type == HoldingObjectType.Pan)
                 return;
 
             holdingObj = collision.gameObject;

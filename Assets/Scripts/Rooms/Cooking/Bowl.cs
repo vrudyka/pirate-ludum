@@ -7,7 +7,9 @@ public class Bowl : MonoBehaviour
 
     public int numOfparticles;
 
-    public GameObject minBar;
+    public GameObject saltBar;
+    public GameObject sugarBar;
+    public GameObject wiskBar;
 
     public int particles;
 
@@ -16,12 +18,19 @@ public class Bowl : MonoBehaviour
     private HoldingObjectType saltOrSugar;
     private bool once;
 
+    public GameObject rawSirnik;
+    private Character character;
 
     private void Awake()
     {
-        minBar.transform.localScale = Vector3.zero;
+        rawSirnik.SetActive(false);
+
+        saltBar.transform.localScale = Vector3.zero;
+        sugarBar.transform.localScale = Vector3.zero;
+        wiskBar.transform.localScale = Vector3.zero;
 
         controller = FindObjectOfType<CookingController>();
+        character = FindObjectOfType<Character>();
     }
 
     private void Update()
@@ -30,9 +39,15 @@ public class Bowl : MonoBehaviour
 
         if (p <= 1f)
         {
-            minBar.transform.localScale = new Vector3(p, 0.5f, 1f);
+            if (HoldingObjectType.Salt == saltOrSugar)
+            {
+                saltBar.transform.localScale = new Vector3(p, 0.5f, 1f);
+            }
+            if (HoldingObjectType.Sugar == saltOrSugar)
+            {
+                sugarBar.transform.localScale = new Vector3(p, 0.5f, 1f);
+            }
         }
-
 
         if (p > 0.33f && p < 0.66f)
         {
@@ -89,10 +104,12 @@ public class Bowl : MonoBehaviour
                 particles += 1;
             }
         }
+
     }
 
     private Vector3 movementCache;
     public float timeMixing;
+    public float neededMixingTime;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -105,10 +122,31 @@ public class Bowl : MonoBehaviour
                 if (holdingObj.transform.position != movementCache)
                 {
                     timeMixing += Time.deltaTime;
+
+                    var t = timeMixing / neededMixingTime;
+
+                    if (t > 1f)
+                    {
+                        controller.NextInQueue();
+                        controller.NextInQueue();
+                    }
+
+                    wiskBar.transform.localScale = new Vector3(Mathf.Clamp(t, 0f, 1f), 0.5f, 1f);
                 }
 
                 movementCache = holdingObj.transform.position;
             }
+        }
+
+        //Debug.Log($"ayeee {character.mouseDown == true} {collision.gameObject.name} {controller.queueNumber}");
+
+        if (character.mouseDown == true && collision.gameObject.name == "Character" && controller.queueNumber == 8)
+        {
+            rawSirnik.SetActive(true);
+
+            controller.holdingObj = rawSirnik;
+
+            rawSirnik.transform.parent = collision.gameObject.transform;
         }
     }
 }
