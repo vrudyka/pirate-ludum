@@ -8,6 +8,15 @@ TagManager:
   - horizontalWall
   - spereCollider
   - Goods
+  - Beer
+  - BeerProjectile
+  - Floor
+  - MotherArea
+  - SpawnZone
+  - MotherAI
+  - Garbege
+  - Borders
+  - LostChild
   layers:
   - Default
   - TransparentFX

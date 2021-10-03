@@ -26,6 +26,11 @@ public class PatrolState : EnemyState
         {
             StateMashine.ChangeState(mother.longRangeAtackState);
         }
+
+        if (Input.GetMouseButtonDown(0) == true)
+        {
+            // StateMashine.ChangeState(mother.longRangeAtackState);
+        }
     }
 
     public override void PhysicsUpdate()

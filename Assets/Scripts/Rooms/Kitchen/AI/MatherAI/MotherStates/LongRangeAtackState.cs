@@ -26,6 +26,7 @@ public class LongRangeAtackState : EnemyState
 
         if (mother.patrol.targetInRange(mother.player, mother.chaseRange) == true)
         {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!");
             StateMashine.ChangeState(mother.chaseState);
         }
     }

@@ -6,5 +6,6 @@ public class Destructive : AbstractCharacterAction
 {
     public override void UpdateAction()
     {
+       // Debug.Log($"Destructive doing stuff");
     }
 }

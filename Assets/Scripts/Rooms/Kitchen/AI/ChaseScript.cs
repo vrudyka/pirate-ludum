@@ -13,4 +13,9 @@ public class ChaseScript : MonoBehaviour
 
         transform.position = transform.position + new Vector3(direction.x, direction.y, 0) * movementSpeed * Time.deltaTime;
     }
+
+    public void Test()
+    {
+        Debug.Log("TEST!!!");
+    }
 }
