@@ -16,7 +16,7 @@ public class KitchenController : MonoBehaviour
 
     private void Start()
     {
-        rnd = new  System.Random();
+        rnd = new System.Random();
 
         childrenSpawnArea = GameObject.FindGameObjectWithTag("SpawnZone").GetComponent<Collider2D>();
         garbageSpawnArea = GameObject.FindGameObjectWithTag("Floor").GetComponent<Collider2D>();
@@ -36,7 +36,7 @@ public class KitchenController : MonoBehaviour
         {
             var coif = this.rnd.Next(-50, 50);
             var position = GenerateRandomSpot(spawnArea);
-            Instantiate(prefab, coif * position.normalized, Quaternion.identity);
+            GameObject.Instantiate(prefab, coif * position.normalized, Quaternion.identity);
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -12,6 +13,7 @@ public class ChildAI : MonoBehaviour
     [SerializeField] private float chaseRange;
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float startWaitTime = 5f;
+    [SerializeField] private Sprite[] babies;
 
     private float waitTime;
     private Collider2D spawnArea;
@@ -24,6 +26,9 @@ public class ChildAI : MonoBehaviour
     {
         spawnArea = GameObject.FindGameObjectWithTag("SpawnZone").GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
+        var currentIndex = UnityEngine.Random.Range(0, babies.Length);
+        GetComponent<SpriteRenderer>().sprite = babies[currentIndex];
     }
 
     private void FixedUpdate()
@@ -36,7 +41,7 @@ public class ChildAI : MonoBehaviour
 
         if (patrol.targetInRange(player, movementSpeed) == true && IsOutOfArea() == true)
         {
-            chase.ChaseTarget(player, chaseRange );
+            chase.ChaseTarget(player, chaseRange);
         }
     }
 
