@@ -24,5 +24,6 @@ public class ChaseState : EnemyState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+        mother.chase.ChaseTarget(this.mother.player, 4f);
     }
 }
