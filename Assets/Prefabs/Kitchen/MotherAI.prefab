@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3739490410382305008}
   - component: {fileID: 6024562606315410603}
   - component: {fileID: 6024562606315410600}
+  - component: {fileID: 2093145973}
   m_Layer: 0
   m_Name: MotherAI
   m_TagString: MotherAI
@@ -29,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6024562606315410602}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.7, y: 8.7, z: -1}
   m_LocalScale: {x: 1.942, y: 1.942, z: 1.942}
   m_Children: []
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -168,7 +169,6 @@ MonoBehaviour:
   cooldown: 3
   cooldownTimer: 0
   patrolArea: {fileID: 0}
-  player: {fileID: 0}
 --- !u!114 &6024562606315410600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,5 +181,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43388376c9619f9418da6508232e4eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTimer: 3
-  cooldown: 2
+  cooldownTimer: 1
+  cooldown: 1
+--- !u!114 &2093145973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024562606315410602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0494b3f91ee21a844b7aeb6f3bd90c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

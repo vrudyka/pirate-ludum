@@ -1,24 +1,20 @@
-using System.Collections;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 
 public class GarbageScript : MonoBehaviour
 {
-    public int coinsCount = 0;
+    public int garbegeCount = 0;
 
-    // [SerializeField] TextMeshProUGUI textCoins;
+    [SerializeField] TextMeshProUGUI textGarbage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player") 
+        if (collision.transform.tag == "Garbege") 
         {
-            coinsCount+=1;
-            // textCoins.text = coinsCount.ToString();
-            Debug.Log("PICK COIN");
-            Destroy(this.gameObject);
+            garbegeCount += 1;
+            textGarbage.text = garbegeCount.ToString();
+            Destroy(collision.gameObject);
         }
     }
 }
