@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7383911805157621519}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,8 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  renderer: {fileID: 1592303411680877533}
-  _rigidbody2D: {fileID: 7383911805157621519}
+  spriteRenderer: {fileID: 0}
+  movementDirection: {x: 0, y: 0}
+  mousePos: {x: 0, y: 0}
+  mouseDown: 0
 --- !u!58 &6107776521861646887
 CircleCollider2D:
   m_ObjectHideFlags: 0
