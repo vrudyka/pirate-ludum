@@ -1023,7 +1023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2848531538928319428, guid: baa6db7c3b2c21a4c9370f4a89aa1e13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.06
+      value: -11.19
       objectReference: {fileID: 0}
     - target: {fileID: 2848531538928319428, guid: baa6db7c3b2c21a4c9370f4a89aa1e13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1159,21 +1159,81 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3731172703101730788, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703101730788, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703101730788, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703101730788, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703296959601, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3731172703296959603, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
       propertyPath: m_TagString
       value: Borders
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703405596404, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3731172703405596406, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
       propertyPath: m_TagString
       value: Borders
       objectReference: {fileID: 0}
+    - target: {fileID: 3731172703620866501, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703620866501, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703620866501, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703620866501, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172703742806920, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3731172703742806922, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
       propertyPath: m_TagString
       value: Borders
       objectReference: {fileID: 0}
+    - target: {fileID: 3731172704006959942, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3731172704006959944, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
       propertyPath: m_TagString
       value: Borders
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172704489152600, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d38223a4ec0fc348a9d9f65b7fe971e, type: 3}
+    - target: {fileID: 3731172704489152601, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731172704489152601, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3731172704499205080, guid: f14ae28ddb2f7494eb2c97d545fe1f25, type: 3}
       propertyPath: m_RootOrder
