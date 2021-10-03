@@ -1450,6 +1450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857516e7a9981ca48829f92597274901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _exitTriggerGameObject: {fileID: 0}
   cookingThings: {fileID: 601987836}
   cursor: {fileID: 632401747}
   queueThings:
@@ -2698,6 +2699,10 @@ PrefabInstance:
     - target: {fileID: 7436295287005408757, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_Name
       value: SceneChangeTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436295287005408757, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408759, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_Size.x

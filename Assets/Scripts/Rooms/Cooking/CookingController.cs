@@ -25,6 +25,8 @@ public class CookingController : MonoBehaviour
 
     // Serve with jam
 
+    [SerializeField] private GameObject _exitTriggerGameObject;
+
     public GameObject cookingThings;
     public GameObject cursor;
 
@@ -66,7 +68,7 @@ public class CookingController : MonoBehaviour
 
     public void Winnn()
     {
-
+        _exitTriggerGameObject.SetActive(true);
     }
 
     private void Update()

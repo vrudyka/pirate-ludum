@@ -4,18 +4,44 @@ public class BatyaChasing : MonoBehaviour
 {
     [SerializeField] private float _chasingSpeed = 0;
     private Transform _characterTransform;
+    private bool _isCanChase = false;
 
     private void Start()
     {
         _characterTransform = FindObjectOfType<Character>().transform;
+        BeerCountController.OnAllBeerDestroyed += BanChasing;
+        Dialog.OnDialogStarted += BanChasing;
+        Dialog.OnDialogEnded += AllowChasing;
     }
 
     private void FixedUpdate()
     {
-        if (_characterTransform != null)
+        if (_isCanChase)
         {
-            Vector3 chaseDirection = new Vector3(_characterTransform.position.x, _characterTransform.position.y, transform.position.z);
-            transform.position = Vector3.MoveTowards(transform.position, chaseDirection, _chasingSpeed * Time.deltaTime);
+            if (_characterTransform != null)
+            {
+                Vector3 chaseDirection = new Vector3(_characterTransform.position.x, _characterTransform.position.y,
+                    transform.position.z);
+                transform.position =
+                    Vector3.MoveTowards(transform.position, chaseDirection, _chasingSpeed * Time.deltaTime);
+            }
         }
+    }
+
+    private void AllowChasing()
+    {
+        _isCanChase = true;
+    }
+
+    private void BanChasing()
+    {
+        _isCanChase = false;
+    }
+
+    private void OnDisable()
+    {
+        Dialog.OnDialogStarted -= BanChasing;
+        Dialog.OnDialogEnded += AllowChasing;
+        BeerCountController.OnAllBeerDestroyed -= BanChasing;
     }
 }

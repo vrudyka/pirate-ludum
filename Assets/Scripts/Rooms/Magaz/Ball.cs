@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     // Public fields
 
     [SerializeField] private TextMeshProUGUI collectedItemsText;
+    [SerializeField] private Dialog _finalDialog;
 
     private Vector2 movementDirection;
     private Vector2 mousePos;
@@ -22,27 +23,42 @@ public class Ball : MonoBehaviour
     private int spoiledItems;
     Rigidbody2D rigidbody;
 
+    private bool _isCanBeShoot;
+
     void Start()
     {
+        AllowMove();
         rigidbody = GetComponent<Rigidbody2D>();
+        Dialog.OnDialogStarted += BanMove;
+        Dialog.OnDialogEnded += AllowMove;
+
+    }
+
+    private void OnDisable()
+    {
+        Dialog.OnDialogStarted -= BanMove;
+        Dialog.OnDialogEnded -= AllowMove;
     }
 
     private void LateUpdate()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseDown = Input.GetMouseButton(0);
-        mouseUp = Input.GetMouseButtonUp(0);
-
-        SetDirection();
-
-        if (mouseUp && isAiming)
+        if (_isCanBeShoot)
         {
-            isAiming = false;
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseDown = Input.GetMouseButton(0);
+            mouseUp = Input.GetMouseButtonUp(0);
 
-            rigidbody.velocity = movementDirection * Time.deltaTime * speed;
+            SetDirection();
+
+            if (mouseUp && isAiming)
+            {
+                isAiming = false;
+
+                rigidbody.velocity = movementDirection * Time.deltaTime * speed;
+            }
+
+            collectedItemsText.text = $"{collectedItems}/7";
         }
-
-        collectedItemsText.text = $"{collectedItems}/7";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -94,6 +110,11 @@ public class Ball : MonoBehaviour
             collectedItems++;
             spoiledItems = collider.gameObject.GetComponent<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
             Destroy(collider.gameObject);
+
+            if (collectedItems == 7)
+            {
+                _finalDialog.StartDialog();
+            }
         }
     }
 
@@ -111,5 +132,16 @@ public class Ball : MonoBehaviour
         dragDirection = mousePos - startingPos;
         speed = dragDirection.magnitude * 500;
         movementDirection = dragDirection.normalized * -1;
+    }
+
+    private void AllowMove()
+    {
+        _isCanBeShoot = true;
+    }
+
+    private void BanMove()
+    {
+        _isCanBeShoot = false;
+        rigidbody.velocity = Vector2.zero;
     }
 }
