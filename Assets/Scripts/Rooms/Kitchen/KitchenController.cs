@@ -7,10 +7,13 @@ public class KitchenController : MonoBehaviour
     [SerializeField] private GameObject childPrefab;
     [SerializeField] private GameObject garbagePrefab;
     [SerializeField] private int childrenCount;
-    [SerializeField] private int garbageCount;
+    [SerializeField] private int garbageAmount;
 
     private Collider2D childrenSpawnArea;
     private Collider2D garbageSpawnArea;
+
+    private LostChildScript lostChildScript;
+    private GarbageScript garbageScript;
 
     private System.Random rnd;
 
@@ -21,8 +24,19 @@ public class KitchenController : MonoBehaviour
         childrenSpawnArea = GameObject.FindGameObjectWithTag("SpawnZone").GetComponent<Collider2D>();
         garbageSpawnArea = GameObject.FindGameObjectWithTag("Floor").GetComponent<Collider2D>();
 
+        lostChildScript = GameObject.FindGameObjectWithTag("LostChild").GetComponent<LostChildScript>();
+        garbageScript = GameObject.FindGameObjectWithTag("Player").GetComponent<GarbageScript>();
+
         SpawnObjectives(childPrefab, childrenSpawnArea, childrenCount);
-        SpawnObjectives(garbagePrefab, garbageSpawnArea, garbageCount);
+        SpawnObjectives(garbagePrefab, garbageSpawnArea, garbageAmount);
+    }
+
+    private void Update()
+    {
+        if (this.garbageScript.garbegeCount > 2 && this.lostChildScript.IsFoud == true)
+        {
+            Debug.Log("VICTORY!!!");
+        }
     }
 
     private Vector2 GenerateRandomSpot(Collider2D spawnArea)
