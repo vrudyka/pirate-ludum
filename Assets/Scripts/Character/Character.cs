@@ -4,7 +4,7 @@ public class Character : MonoBehaviour
 {
     // Inspector stuff.
     [SerializeField] private float speed;
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // State.
     private CharacterState characterStateBackingField;
@@ -53,7 +53,7 @@ public class Character : MonoBehaviour
                     }
             }
 
-            renderer.color = color;
+            spriteRenderer.color = color;
         }
     }
 
