@@ -109,7 +109,7 @@ public class Ball : MonoBehaviour
         }
 
         dragDirection = mousePos - startingPos;
-        speed = dragDirection.magnitude * 100;
+        speed = dragDirection.magnitude * 500;
         movementDirection = dragDirection.normalized * -1;
     }
 }

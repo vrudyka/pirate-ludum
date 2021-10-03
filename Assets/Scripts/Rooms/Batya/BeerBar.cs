@@ -15,9 +15,6 @@ public class BeerBar : MonoBehaviour
     {
         var beerValue = currentBeerVolume / 100f;
         _beerBarImage.fillAmount = beerValue;
-
-        Debug.LogError(_beerBarImage.fillAmount);
-
         SetBeerBarColor(beerValue);
     }
 

@@ -84,8 +84,6 @@ public class Character : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 
     private CharacterState RandomState()
