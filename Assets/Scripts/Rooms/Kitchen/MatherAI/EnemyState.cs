@@ -1,9 +1,9 @@
-public abstract class State
+public abstract class EnemyState
 {
     protected MotherAI mother;
     protected StateMashine StateMashine;
 
-    protected State(MotherAI mother, StateMashine StateMashine)
+    protected EnemyState(MotherAI mother, StateMashine StateMashine)
     {
         this.mother = mother;
         this.StateMashine = StateMashine;

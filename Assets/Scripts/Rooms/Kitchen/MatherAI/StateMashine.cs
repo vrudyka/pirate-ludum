@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class StateMashine
 {
-    public State CurrentState { get; private set; }
+    public EnemyState CurrentState { get; private set; }
 
-    public void InitializeState(State startingState)
+    public void InitializeState(EnemyState startingState)
     {
         CurrentState = startingState;
         CurrentState.Enter();
     }
 
-    public void ChangeState(State newState)
+    public void ChangeState(EnemyState newState)
     {
         CurrentState.Exit();
 

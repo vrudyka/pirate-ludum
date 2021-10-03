@@ -5,8 +5,7 @@ using UnityEngine;
 public class ChildrenSwaner : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
-    private GameObject childPrefab;
+    [SerializeField] private GameObject childPrefab;
     private Collider2D spawnArea;
 
     void Start()

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnZone
+  - MotherArea
+  - MotherAI
+  - Floor
   layers:
   - Default
   - TransparentFX
