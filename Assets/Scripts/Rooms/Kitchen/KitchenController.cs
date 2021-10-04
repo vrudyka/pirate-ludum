@@ -8,6 +8,7 @@ public class KitchenController : MonoBehaviour
     [SerializeField] private GameObject garbagePrefab;
     [SerializeField] private int childrenCount;
     [SerializeField] private int garbageAmount;
+    [SerializeField] private GameObject _sceneChangeTrigger;
 
     private Collider2D childrenSpawnArea;
     private Collider2D garbageSpawnArea;
@@ -36,6 +37,7 @@ public class KitchenController : MonoBehaviour
         if (garbageScript.garbegeCount > 2 && this.lostChildScript.IsFoud == true)
         {
             Debug.Log("VICTORY!!!");
+            _sceneChangeTrigger.SetActive(true);
         }
     }
 

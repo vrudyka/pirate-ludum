@@ -18,12 +18,12 @@ public class Bowl : MonoBehaviour
     private HoldingObjectType saltOrSugar;
     private bool once;
 
-    public GameObject rawSirnik;
+    //public GameObject rawSirnik;
     private Character character;
 
     private void Awake()
     {
-        rawSirnik.SetActive(false);
+        //rawSirnik.SetActive(false);
 
         saltBar.transform.localScale = Vector3.zero;
         sugarBar.transform.localScale = Vector3.zero;

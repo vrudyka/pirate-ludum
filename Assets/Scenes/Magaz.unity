@@ -132,12 +132,44 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: _phrasesImages.Array.size
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: _phrasesImages.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 75fe1c41caf8e914f8db234415268d1d, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 40ee381996d9b3445a66a4408e6978e9, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 208abdf7a6f371c4fadbf542a7e1ab62, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 52937407160ccb34badcd55a46c1931b, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 388f39ba013f7d84baf50610f6d53939, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: cfdfd3dd7419e194f94049a6b0b955ec, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 04704078b74357f4eb111be26fb01093, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 93c25fd39488bdf4c9d3aa87e0809dee, type: 3}
+    - target: {fileID: 708465547637097485, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
+      propertyPath: _phrasesImages.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: f820f6fa3745baa4cba14594efec82dc, type: 3}
     - target: {fileID: 2094924247750378283, guid: c746f6e9416a58347a0cd15dd0c6193a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1245,11 +1277,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phrasesImageNames.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phrasesImageNames.Array.data[0]
-      value: Circle
+      value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[1]
+      value: Heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[2]
+      value: Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[3]
+      value: Broken heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[4]
+      value: Bottle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
@@ -3032,10 +3080,6 @@ PrefabInstance:
       propertyPath: _dialog
       value: 
       objectReference: {fileID: 786441015}
-    - target: {fileID: 2025670273322878980, guid: 237e58190a2afd04a900319db47df004, type: 3}
-      propertyPath: _dialog
-      value: 
-      objectReference: {fileID: 786441015}
     - target: {fileID: 2620906271142685800, guid: 237e58190a2afd04a900319db47df004, type: 3}
       propertyPath: m_Name
       value: DialogCanvas
@@ -3128,15 +3172,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8544654741917673849, guid: 237e58190a2afd04a900319db47df004, type: 3}
-      propertyPath: m_Name
-      value: FinalDialogPhraseDisplayer
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237e58190a2afd04a900319db47df004, type: 3}
 --- !u!114 &1599200391 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4449816757236890603, guid: 237e58190a2afd04a900319db47df004, type: 3}
+  m_PrefabInstance: {fileID: 1599200390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1599200392 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 671895679, guid: 237e58190a2afd04a900319db47df004, type: 3}
   m_PrefabInstance: {fileID: 1599200390}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3423,17 +3474,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1674493421 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 420235175, guid: 237e58190a2afd04a900319db47df004, type: 3}
-  m_PrefabInstance: {fileID: 1599200390}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1718226014
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,7 +4165,7 @@ PrefabInstance:
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phraseDisplay
       value: 
-      objectReference: {fileID: 1674493421}
+      objectReference: {fileID: 1599200392}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
       value: 475
@@ -4140,11 +4180,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phrasesImageNames.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phrasesImageNames.Array.data[0]
-      value: Circle
+      value: Pancakes
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[1]
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[2]
+      value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[3]
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
+      propertyPath: _phrasesImageNames.Array.data[4]
+      value: Angry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
