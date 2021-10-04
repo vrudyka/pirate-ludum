@@ -226,6 +226,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 938092144}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7051609303326961354, guid: 237e58190a2afd04a900319db47df004, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -304,11 +316,11 @@ PrefabInstance:
       objectReference: {fileID: 19786200}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
-      value: 1650
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.y
-      value: 675
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.z
@@ -460,6 +472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 669986811106098395, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
+      propertyPath: _sceneToLoadName
+      value: Batya
+      objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408756, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -507,6 +523,10 @@ PrefabInstance:
     - target: {fileID: 7436295287005408757, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_Name
       value: SceneChangeTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436295287005408757, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408759, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_Size.x
@@ -1011,15 +1031,15 @@ PrefabInstance:
       objectReference: {fileID: 376841759}
     - target: {fileID: 5888147754510975422, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: m_Size.x
-      value: 4.5971985
+      value: 3.922368
       objectReference: {fileID: 0}
     - target: {fileID: 5888147754510975422, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: m_Size.y
-      value: 5.5160255
+      value: 11.171742
       objectReference: {fileID: 0}
     - target: {fileID: 5888147754510975422, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
       propertyPath: m_Offset.x
-      value: -0.095892906
+      value: -0.3851056
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f29f5f1b79cc6114ca4a5109bf7925ee, type: 3}
@@ -1171,7 +1191,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1592303411680877522, guid: 8d7b1b484d5af8c4b8f7e10c41933bdf, type: 3}
       propertyPath: speed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1592303411680877523, guid: 8d7b1b484d5af8c4b8f7e10c41933bdf, type: 3}
       propertyPath: m_Name

@@ -74,7 +74,6 @@ public class MotherAI : MonoBehaviour
         patrolState = new PatrolState(this, stateMashine);
         longRangeAtackState = new LongRangeAtackState(this, stateMashine);
         chaseState = new ChaseState(this, stateMashine);
-
         stateMashine.InitializeState(patrolState);
     }
 
@@ -88,7 +87,7 @@ public class MotherAI : MonoBehaviour
         stateMashine.CurrentState.PhysicsUpdate();
     }
     
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
