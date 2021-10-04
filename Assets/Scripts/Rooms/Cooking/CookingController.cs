@@ -28,6 +28,7 @@ public class CookingController : MonoBehaviour
     [SerializeField] private GameObject _exitTriggerGameObject;
     [SerializeField] private GameObject _pancakes;
     [SerializeField] private GameObject _bowlLight;
+    [SerializeField] private GameObject _carpetLight;
 
     public GameObject cookingThings;
     public GameObject cursor;
@@ -78,6 +79,7 @@ public class CookingController : MonoBehaviour
         _pancakes.SetActive(true);
         _exitTriggerGameObject.SetActive(true);
         _bowlLight.SetActive(false);
+        _carpetLight.SetActive(true);
     }
 
     private void Update()
