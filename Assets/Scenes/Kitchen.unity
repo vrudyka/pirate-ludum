@@ -2158,7 +2158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5976806557144910666, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5976806557144910666, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2192,6 +2192,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7a81c2dfbc8d92148a0733da66b39b88, type: 3}
+    - target: {fileID: 5976806557144910667, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1164796244870060721, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5af118cd68dad2846ae3500cb30be36f, type: 3}
@@ -2775,6 +2779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6024562606315410596, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410597, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2789,7 +2797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410597, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410597, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2819,14 +2827,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6024562606315410600, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
-      propertyPath: cooldown
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6024562606315410600, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
-      propertyPath: cooldownTimer
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410602, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_Name
       value: MotherAI
@@ -2835,5 +2835,9 @@ PrefabInstance:
       propertyPath: patrolArea
       value: 
       objectReference: {fileID: 1220694957}
+    - target: {fileID: 6024562606315410603, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
+      propertyPath: longRangeAtackDistance
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}

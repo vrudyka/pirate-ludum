@@ -11,6 +11,6 @@ public class ChaseScript : MonoBehaviour
 
         // transform.eulerAngles = Vector3.forward * angle;
 
-        transform.position = transform.position + new Vector3(direction.x, direction.y, 0) * movementSpeed * Time.deltaTime;
+        transform.position = transform.position + new Vector3(direction.x, direction.y, -1) * movementSpeed * Time.deltaTime;
     }
 }
