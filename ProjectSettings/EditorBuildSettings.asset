@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Princess 1.unity
     guid: 4c701402ccd8b3849b9e4d35c66078b6
+  - enabled: 1
+    path: Assets/Scenes/WindowStreet.unity
+    guid: 38bd843167c465a4f8c7e0047c187658
   m_configObjects: {}
