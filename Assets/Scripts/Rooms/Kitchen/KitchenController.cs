@@ -38,7 +38,7 @@ public class KitchenController : MonoBehaviour
         lostChildScript = GameObject.FindGameObjectWithTag("LostChild").GetComponent<LostChildScript>();
         garbageScript = GameObject.FindGameObjectWithTag("Player").GetComponent<GarbageScript>();
 
-        if (garbageScript.garbegeCount > 2 && this.lostChildScript.IsFoud == true)
+        if (garbageScript.garbegeCount > 4 && this.lostChildScript.IsFoud == true)
         {
             Debug.Log("VICTORY!!!");
             _sceneChangeTrigger.SetActive(true);

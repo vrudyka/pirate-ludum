@@ -1,6 +1,7 @@
 using TMPro;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
@@ -61,8 +62,8 @@ public class Ball : MonoBehaviour
                 rigidbody.velocity = movementDirection * Time.deltaTime * speed;
             }
 
-            collectedItemsText.text = $"{collectedItems}/7";
-            spoiledText.text = $"{spoiledItems} spoiled";
+            collectedItemsText.text = $"{collectedItems}/7 total";
+            spoiledText.text = $"{spoiledItems}/2 spoiled";
         }
     }
 
@@ -112,6 +113,10 @@ public class Ball : MonoBehaviour
         spoiledItems = collider.gameObject.GetComponentInChildren<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
         Destroy(collider.gameObject);
 
+        if (spoiledItems >= 2)
+        {
+            SceneController.Instance.ReloadCurrentScene();
+        }
         if (collectedItems == 7)
         {
             _finalDialog.StartDialog();
@@ -125,6 +130,10 @@ public class Ball : MonoBehaviour
         spoiledItems = collider.gameObject.GetComponentInChildren<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
         Destroy(collider.gameObject);
 
+        if (spoiledItems >= 2)
+        {
+            SceneController.Instance.ReloadCurrentScene();
+        }
         if (collectedItems == 7)
         {
             _finalDialog.StartDialog();
