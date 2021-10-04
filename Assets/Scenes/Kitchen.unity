@@ -287,11 +287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6318184034424793424, guid: 64f0a34c5dd67774a8499765f848316b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.3
+      value: 10.11
       objectReference: {fileID: 0}
     - target: {fileID: 6318184034424793424, guid: 64f0a34c5dd67774a8499765f848316b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.8
+      value: -18.34
       objectReference: {fileID: 0}
     - target: {fileID: 6318184034424793424, guid: 64f0a34c5dd67774a8499765f848316b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2551,14 +2551,14 @@ RectTransform:
   m_GameObject: {fileID: 2053471163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 24.437193, y: 9.807369, z: 5.865513}
+  m_LocalScale: {x: 16.18964, y: 9.807369, z: 5.865513}
   m_Children: []
   m_Father: {fileID: 59029283}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42.5, y: -4}
+  m_AnchoredPosition: {x: 20.72, y: -4}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2053471165
@@ -2789,11 +2789,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410597, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.7
+      value: 22.79
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410597, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.7
+      value: 14.94
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410597, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2833,7 +2833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410603, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: chaseRange
-      value: 2.03
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024562606315410603, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
+      propertyPath: chaseSpeed
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410603, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: patrolArea
