@@ -26,6 +26,8 @@ public class CookingController : MonoBehaviour
     // Serve with jam
 
     [SerializeField] private GameObject _exitTriggerGameObject;
+    [SerializeField] private GameObject _pancakes;
+    [SerializeField] private GameObject _bowlLight;
 
     public GameObject cookingThings;
     public GameObject cursor;
@@ -64,12 +66,18 @@ public class CookingController : MonoBehaviour
         queueThings[queueNumber].obj.SetHighlight(true);
 
         queueNumber++;
+
+        if (queueNumber == 7)
+        {
+            _bowlLight.SetActive(true);
+        }
     }
 
     public void Winnn()
     {
-        Debug.LogError("Aloga");
+        _pancakes.SetActive(true);
         _exitTriggerGameObject.SetActive(true);
+        _bowlLight.SetActive(false);
     }
 
     private void Update()
