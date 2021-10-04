@@ -1,21 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 using UnityEngine;
 using UnityEngine.Analytics;
-using UnityEngine.Events;
 
 public class ChildAI : MonoBehaviour
 {
     private Transform player;
 
-    [SerializeField]
-    private float chaseRange;
-    [SerializeField]
-    private float movementSpeed = 5f;
-    [SerializeField]
-    private float startWaitTime = 5f;
+    [SerializeField] private float chaseRange;
+    [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float startWaitTime = 5f;
+    [SerializeField] private Sprite[] babies;
 
     private float waitTime;
 
@@ -60,9 +58,9 @@ public class ChildAI : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-           Destroy(this.gameObject);
-           Debug.Log("MOTHER IS ANGRY!!");
-           motherAI.stateMashine.ChangeState(motherAI.chaseState);
+            Destroy(this.gameObject);
+            Debug.Log("MOTHER IS ANGRY!!");
+            motherAI.stateMashine.ChangeState(motherAI.chaseState);
         }
     }
 }

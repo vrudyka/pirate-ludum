@@ -7,6 +7,13 @@ public class Ball : MonoBehaviour
     // Public fields
 
     [SerializeField] private TextMeshProUGUI collectedItemsText;
+    [SerializeField] private TextMeshProUGUI spoiledText;
+    [SerializeField] private Dialog _finalDialog;
+
+    [SerializeField] private GameObject cashier;
+    [SerializeField] private Sprite cashierAngry;
+
+    public bool _isCanBeShoot;
 
     private Vector2 movementDirection;
     private Vector2 mousePos;
@@ -22,27 +29,40 @@ public class Ball : MonoBehaviour
     private int spoiledItems;
     Rigidbody2D rigidbody;
 
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        Dialog.OnDialogStarted += BanMove;
+        Dialog.OnDialogEnded += AllowMove;
+    }
+
+    private void OnDisable()
+    {
+        Dialog.OnDialogStarted -= BanMove;
+        Dialog.OnDialogEnded -= AllowMove;
     }
 
     private void LateUpdate()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseDown = Input.GetMouseButton(0);
-        mouseUp = Input.GetMouseButtonUp(0);
-
-        SetDirection();
-
-        if (mouseUp && isAiming)
+        if (_isCanBeShoot)
         {
-            isAiming = false;
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseDown = Input.GetMouseButton(0);
+            mouseUp = Input.GetMouseButtonUp(0);
 
-            rigidbody.velocity = movementDirection * Time.deltaTime * speed;
+            SetDirection();
+
+            if (mouseUp && isAiming)
+            {
+                isAiming = false;
+
+                rigidbody.velocity = movementDirection * Time.deltaTime * speed;
+            }
+
+            collectedItemsText.text = $"{collectedItems}/7";
+            spoiledText.text = $"{spoiledItems} spoiled";
         }
-
-        collectedItemsText.text = $"{collectedItems}/7";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,9 +80,7 @@ public class Ball : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Goods"))
         {
-            collectedItems++;
-            spoiledItems = collision.gameObject.GetComponent<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
-            Destroy(collision.gameObject);
+            CountCollectedItems(collision);
         }
 
         if (collision.gameObject.tag == "verticalWall")
@@ -87,13 +105,35 @@ public class Ball : MonoBehaviour
         }
     }
 
+    private void CountCollectedItems(Collider2D collider)
+    {
+        collectedItems++;
+        spoiledItems = collider.gameObject.GetComponentInChildren<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
+        Destroy(collider.gameObject);
+
+        if (collectedItems == 7)
+        {
+            _finalDialog.StartDialog();
+        }
+    }
+
+    private void CountCollectedItems(Collision2D collider)
+    {
+        collectedItems++;
+        spoiledItems = collider.gameObject.GetComponentInChildren<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
+        Destroy(collider.gameObject);
+
+        if (collectedItems == 7)
+        {
+            _finalDialog.StartDialog();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Goods")
         {
-            collectedItems++;
-            spoiledItems = collider.gameObject.GetComponent<Goods>().isSpoiled == true ? spoiledItems + 1 : spoiledItems;
-            Destroy(collider.gameObject);
+            CountCollectedItems(collider);
         }
     }
 
@@ -109,7 +149,20 @@ public class Ball : MonoBehaviour
         }
 
         dragDirection = mousePos - startingPos;
-        speed = dragDirection.magnitude * 500;
+        speed = dragDirection.magnitude * 200;
         movementDirection = dragDirection.normalized * -1;
+    }
+
+    private void AllowMove()
+    {
+        cashier.GetComponent<SpriteRenderer>().sprite = cashierAngry;
+
+        _isCanBeShoot = true;
+    }
+
+    private void BanMove()
+    {
+        _isCanBeShoot = false;
+        rigidbody.velocity = Vector2.zero;
     }
 }

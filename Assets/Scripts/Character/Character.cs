@@ -10,72 +10,32 @@ public class Character : MonoBehaviour
     private CharacterState characterStateBackingField;
     private AbstractCharacterAction actionExecuter;
 
+    private Rigidbody2D _rigidbody2d;
+
     // Input.
     public Vector2 movementDirection;
     public Vector2 mousePos;
     public bool mouseDown;
 
+    public bool _isCanMove;
+
+    
     public static Character Instance = null;
 
-    public CharacterState CharacterState
-    {
-        get => characterStateBackingField;
-
-        set
-        {
-            characterStateBackingField = value;
-
-            if (spriteRenderer == null)
-            {
-                return;
-            }
-
-            var color = Color.white;
-
-            switch (characterStateBackingField)
-            {
-                case CharacterState.Destructive:
-                    {
-                        color = Color.red;
-                        actionExecuter = new Destructive();
-                        break;
-                    }
-                case CharacterState.Builder:
-                    {
-                        color = Color.blue;
-                        actionExecuter = new Builder();
-                        break;
-                    }
-                case CharacterState.Enlarger:
-                    {
-                        color = Color.magenta;
-                        actionExecuter = new Enlarger();
-                        break;
-                    }
-                case CharacterState.Stupid:
-                    {
-                        color = Color.yellow;
-                        actionExecuter = new Stupid();
-                        break;
-                    }
-            }
-
-            spriteRenderer.color = color;
-        }
-    }
 
     public void Die()
     {
-        CharacterState = RandomState();
+        
     }
 
     private void Awake()
     {
-        CharacterState = RandomState();
+        _rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
+        AllowMove();
         if (Instance == null)
         {
             Instance = this;
@@ -84,16 +44,25 @@ public class Character : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Dialog.OnDialogStarted += BanMove;
+        Dialog.OnDialogEnded += AllowMove;
     }
 
-    private CharacterState RandomState()
+
+    private void OnDisable()
     {
-        return (CharacterState)Random.Range(0, (int)CharacterState.TypeCount);
+        Dialog.OnDialogStarted -= BanMove;
+        Dialog.OnDialogEnded -= AllowMove;
     }
+
 
     private void Update()
     {
-        Walk();
+        if (_isCanMove)
+        {
+            Walk();
+        }
 
         //actionExecuter.UpdateAction();
 
@@ -101,6 +70,17 @@ public class Character : MonoBehaviour
         {
             ////SceneManager.LoadScene("Batya");
         }
+    }
+
+    private void AllowMove()
+    {
+        _isCanMove = true;
+    }
+
+    private void BanMove()
+    {
+        _isCanMove = false;
+        _rigidbody2d.velocity = Vector2.zero;
     }
 
     private void LateUpdate()
@@ -115,8 +95,8 @@ public class Character : MonoBehaviour
     private void Walk()
     {
         Vector3 velocity = new Vector3(movementDirection.x, movementDirection.y, 0f);
-        Vector3 displacement = velocity * Time.deltaTime * speed;
-        transform.localPosition += displacement;
+        Vector3 displacement = velocity * speed;
+        _rigidbody2d.velocity = displacement;
     }
 
     private void ExecuteStateAction()

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public static SceneController Instance = null;
+    public static SceneController Instance;
 
     public void LoadScene(string sceneName)
     {
