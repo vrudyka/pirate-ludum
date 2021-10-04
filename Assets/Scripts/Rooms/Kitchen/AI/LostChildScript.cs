@@ -8,6 +8,7 @@ using UnityEngine.Events;
 
 public class LostChildScript : MonoBehaviour
 {
+    public bool IsFoud;
     private Transform player;
 
     [SerializeField]
@@ -19,30 +20,35 @@ public class LostChildScript : MonoBehaviour
 
     private float waitTime;
 
-    private Collider2D spawnArea;
+    private Collider2D lostChildArea;
 
     private PatrolScript patrol;
+    private ChaseScript chase;
+
+    private Transform motherAI;
+
+    // UnityEvent m_MyEvent;
 
     private void Start()
     {
-        spawnArea = GameObject.FindGameObjectWithTag("SpawnZone").GetComponent<Collider2D>();
+        lostChildArea = GameObject.FindGameObjectWithTag("LostChildArea").GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        motherAI = GameObject.FindGameObjectWithTag("MotherAI").GetComponent<Transform>();
         patrol = GetComponent<PatrolScript>();
+        chase = GetComponent<ChaseScript>();
     }
 
     private void FixedUpdate()
     {
-        patrol.PatrolTeretory(spawnArea, startWaitTime);
-
-        //if (patrol.targetInRange(player, movementSpeed) == true && IsOutOfArea() == true)
-        //{
-        //    chase.ChaseTarget(player, chaseRange);
-        //}
+        if (IsInOfArea() == true)
+        {
+            patrol.PatrolTeretory(lostChildArea, startWaitTime);
+        }
     }
 
-    private bool IsOutOfArea()
+    private bool IsInOfArea()
     {
-        if (spawnArea.bounds.Contains(transform.position))
+        if (lostChildArea.bounds.Contains(transform.position))
         {
             return true;
         }
@@ -54,7 +60,14 @@ public class LostChildScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            this.IsFoud = true;
+            chase.ChaseTarget(motherAI, chaseRange);
+            // m_MyEvent.AddListener(Ping);
         }
     }
+
+    //void Ping()
+    //{
+    //    Debug.Log("Ping");
+    //}
 }

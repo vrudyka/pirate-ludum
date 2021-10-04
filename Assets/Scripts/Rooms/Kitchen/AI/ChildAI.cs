@@ -16,27 +16,26 @@ public class ChildAI : MonoBehaviour
     [SerializeField] private Sprite[] babies;
 
     private float waitTime;
+
     private Collider2D spawnArea;
-    private Vector2 randomDirection;
 
     private PatrolScript patrol;
+
     private ChaseScript chase;
+
+    private MotherAI motherAI;
 
     private void Start()
     {
         spawnArea = GameObject.FindGameObjectWithTag("SpawnZone").GetComponent<Collider2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
-        var currentIndex = UnityEngine.Random.Range(0, babies.Length);
-        GetComponent<SpriteRenderer>().sprite = babies[currentIndex];
+        motherAI = GameObject.FindGameObjectWithTag("MotherAI").GetComponent<MotherAI>();
+        patrol = GetComponent<PatrolScript>();
+        chase = GetComponent<ChaseScript>();
     }
 
     private void FixedUpdate()
     {
-        // PatrolTeretory();
-        patrol = GetComponent<PatrolScript>();
-        chase = GetComponent<ChaseScript>();
-
         patrol.PatrolTeretory(spawnArea, startWaitTime);
 
         if (patrol.targetInRange(player, movementSpeed) == true && IsOutOfArea() == true)
@@ -55,17 +54,13 @@ public class ChildAI : MonoBehaviour
         return false;
     }
 
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Player") == true)
-    //    {
-    //        Debug.Log("CATCH");
-    //    }
-    //}
-
-    //void OnCollisionEnter2D(Collision2D coll) {
-    //    if (coll.gameObject.tag == "Player")
-    //        Debug.Log("CATCH");
-
-    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            Debug.Log("MOTHER IS ANGRY!!");
+            motherAI.stateMashine.ChangeState(motherAI.chaseState);
+        }
+    }
 }
