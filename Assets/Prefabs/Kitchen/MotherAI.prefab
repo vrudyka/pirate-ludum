@@ -160,10 +160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolSpeed: 0.1
-  chaseSpeed: 3
+  chaseSpeed: 2.4
   stopTime: 3
-  chaseRange: 7
-  longRangeAtackDistance: 14
+  chaseRange: 5
+  longRangeAtackDistance: 10
   startWaitTime: 5
   bompPrefab: {fileID: 5220042371225136820, guid: cba4ded1f04ebb94c9da0a8a21074ba4, type: 3}
   cooldown: 3

@@ -1206,8 +1206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childPrefab: {fileID: 6318184034424793439, guid: 0578b8323aa77f14ab5c40da3d10ffab, type: 3}
   garbagePrefab: {fileID: 8032725129234872847, guid: 349e65165e593bb48b98fe34b07699a4, type: 3}
-  childrenCount: 9
-  garbageAmount: 10
+  childrenCount: 5
+  garbageAmount: 14
 --- !u!4 &626178262
 Transform:
   m_ObjectHideFlags: 0
@@ -1556,14 +1556,14 @@ RectTransform:
   m_GameObject: {fileID: 1220694956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.53931, y: 28.36036, z: 9.490384}
+  m_LocalScale: {x: 35.344982, y: 16.444471, z: 18.343016}
   m_Children: []
   m_Father: {fileID: 59029283}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.28, y: 16.11}
+  m_AnchoredPosition: {x: 36.14, y: 21.7}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1320283487
@@ -1912,15 +1912,15 @@ RectTransform:
   m_GameObject: {fileID: 1424393608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 56.506947, y: 15.993732, z: 9.885817}
+  m_LocalScale: {x: 39.885994, y: 14.393904, z: 6.9780025}
   m_Children: []
   m_Father: {fileID: 59029283}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.1, y: 10}
-  m_SizeDelta: {x: 1, y: 0.9246}
+  m_AnchoredPosition: {x: -1.02, y: 10.2}
+  m_SizeDelta: {x: 0.6955, y: 0.9246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1424393611
 BoxCollider2D:
@@ -2830,6 +2830,10 @@ PrefabInstance:
     - target: {fileID: 6024562606315410602, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: m_Name
       value: MotherAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024562606315410603, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
+      propertyPath: chaseRange
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 6024562606315410603, guid: 6d8a16b77952b144f8f0e8b6f2c0d8db, type: 3}
       propertyPath: patrolArea
