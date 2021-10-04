@@ -18,6 +18,10 @@ public class KitchenController : MonoBehaviour
 
     private System.Random rnd;
 
+    public AudioSource audioSource;
+    public AudioClip clip;
+    public float volume=0.5f;
+
     private void Start()
     {
         rnd = new System.Random();
