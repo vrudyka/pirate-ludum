@@ -38,9 +38,14 @@ public class LostChildScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (IsInOfArea() == true)
+        if (IsInOfArea() == true && IsFoud == false)
         {
             patrol.PatrolTeretory(lostChildArea, startWaitTime);
+        }
+
+        if (this.IsFoud == true)
+        {
+            this.chase.ChaseTarget(this.motherAI, 1f);
         }
     }
 
@@ -59,7 +64,6 @@ public class LostChildScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             this.IsFoud = true;
-            chase.ChaseTarget(motherAI, chaseRange);
         }
     }
 }
