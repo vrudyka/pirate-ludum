@@ -95,8 +95,8 @@ public class Character : MonoBehaviour
     private void Walk()
     {
         Vector3 velocity = new Vector3(movementDirection.x, movementDirection.y, 0f);
-        Vector3 displacement = velocity * speed;
-        _rigidbody2d.velocity = displacement;
+        Vector3 displacement = velocity * Time.deltaTime *  speed;
+        transform.position += displacement;
     }
 
     private void ExecuteStateAction()

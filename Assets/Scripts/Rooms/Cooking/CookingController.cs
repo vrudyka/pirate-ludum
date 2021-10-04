@@ -68,6 +68,7 @@ public class CookingController : MonoBehaviour
 
     public void Winnn()
     {
+        Debug.LogError("Aloga");
         _exitTriggerGameObject.SetActive(true);
     }
 

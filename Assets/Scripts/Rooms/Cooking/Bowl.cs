@@ -138,15 +138,11 @@ public class Bowl : MonoBehaviour
             }
         }
 
-        //Debug.Log($"ayeee {character.mouseDown == true} {collision.gameObject.name} {controller.queueNumber}");
+        Debug.Log($"ayeee {character.mouseDown == true} {collision.gameObject.name} {controller.queueNumber}");
 
-        if (character.mouseDown == true && collision.gameObject.name == "Character" && controller.queueNumber == 8)
+        if (character.mouseDown == true && collision.gameObject.name == "Character" && controller.queueNumber == 7)
         {
-            rawSirnik.SetActive(true);
-
-            controller.holdingObj = rawSirnik;
-
-            rawSirnik.transform.parent = collision.gameObject.transform;
+            controller.Winnn();
         }
     }
 }
