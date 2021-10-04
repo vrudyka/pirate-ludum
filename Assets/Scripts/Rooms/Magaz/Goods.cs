@@ -7,7 +7,7 @@ public class Goods : MonoBehaviour
     // Public fields
 
     [SerializeField] private SpriteRenderer goodsColor;
-    [SerializeField] private int id;
+    [SerializeField] private Ball Ball;
     [SerializeField] private int spoilCoef;
 
     private float spoiledTimer;
@@ -20,6 +20,8 @@ public class Goods : MonoBehaviour
     }
     private void Update()
     {
+        if (Ball._isCanBeShoot == false)
+            return;
         spoiledTimer -= (Time.deltaTime * spoilCoef);
         goodsColor.color = new Color(255/255f, spoiledTimer/255f, spoiledTimer/255f, 255/255f);
 
