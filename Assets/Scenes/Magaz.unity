@@ -1229,7 +1229,7 @@ PrefabInstance:
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phraseDisplay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1599200391}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
       value: 500
@@ -1363,11 +1363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408756, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.52
+      value: 8.25
       objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408756, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.16
+      value: 3.34
       objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408756, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1405,6 +1405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneChangeTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 7436295287005408757, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7436295287005408759, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
       propertyPath: m_Size.x
       value: 0.69602585
@@ -1419,6 +1423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
+--- !u!1 &834651784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7436295287005408757, guid: ffa00a2c0f1e8b2489fdc3c7383a5df6, type: 3}
+  m_PrefabInstance: {fileID: 834651783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919049525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,6 +2938,10 @@ PrefabInstance:
       propertyPath: _dialog
       value: 
       objectReference: {fileID: 1912419921}
+    - target: {fileID: 1405698949958988567, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: _dialog
+      value: 
+      objectReference: {fileID: 786441015}
     - target: {fileID: 2025670273322878980, guid: 237e58190a2afd04a900319db47df004, type: 3}
       propertyPath: _dialog
       value: 
@@ -3021,12 +3034,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7051609303326961354, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8544654741917673849, guid: 237e58190a2afd04a900319db47df004, type: 3}
       propertyPath: m_Name
       value: FinalDialogPhraseDisplayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237e58190a2afd04a900319db47df004, type: 3}
+--- !u!114 &1599200391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4449816757236890603, guid: 237e58190a2afd04a900319db47df004, type: 3}
+  m_PrefabInstance: {fileID: 1599200390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1606777870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,7 +3642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1795329804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4665,6 +4693,7 @@ MonoBehaviour:
   collectedItemsText: {fileID: 1795329805}
   spoiledText: {fileID: 169118067}
   _finalDialog: {fileID: 786441015}
+  _sceneChangeTrigger: {fileID: 834651784}
   cashier: {fileID: 1145128779}
   cashierAngry: {fileID: 21300000, guid: 59c086d23fd71d24aa273e64e0f4512c, type: 3}
   _isCanBeShoot: 0

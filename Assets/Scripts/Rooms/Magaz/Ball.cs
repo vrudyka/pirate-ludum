@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private TextMeshProUGUI collectedItemsText;
     [SerializeField] private TextMeshProUGUI spoiledText;
     [SerializeField] private Dialog _finalDialog;
+    [SerializeField] private GameObject _sceneChangeTrigger;
 
     [SerializeField] private GameObject cashier;
     [SerializeField] private Sprite cashierAngry;
@@ -114,6 +115,7 @@ public class Ball : MonoBehaviour
         if (collectedItems == 7)
         {
             _finalDialog.StartDialog();
+            _sceneChangeTrigger.SetActive(true);
         }
     }
 
