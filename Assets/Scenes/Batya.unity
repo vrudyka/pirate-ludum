@@ -189,11 +189,11 @@ PrefabInstance:
       objectReference: {fileID: 2620906272967228328}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
-      value: 800
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.y
-      value: 800
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phrasesImageNames.Array.size
@@ -677,11 +677,11 @@ PrefabInstance:
       objectReference: {fileID: 2620906272967228327}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
-      value: 1725
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.y
-      value: 700
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _phrasesImageNames.Array.size
@@ -1251,6 +1251,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2620906271142685812, guid: 237e58190a2afd04a900319db47df004, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 534705721}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_SortingOrder
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620906271142685815, guid: 237e58190a2afd04a900319db47df004, type: 3}
+      propertyPath: m_PlaneDistance
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4971285902514589213, guid: 237e58190a2afd04a900319db47df004, type: 3}
