@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childPrefab: {fileID: 6318184034424793439, guid: 0578b8323aa77f14ab5c40da3d10ffab, type: 3}
   garbagePrefab: {fileID: 8032725129234872847, guid: 349e65165e593bb48b98fe34b07699a4, type: 3}
-  childrenCount: 7
+  childrenCount: 5
   garbageAmount: 14
 --- !u!4 &626178262
 Transform:
