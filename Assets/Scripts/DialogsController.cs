@@ -53,6 +53,5 @@ public class DialogsController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
     }
 }
