@@ -48,7 +48,7 @@ public class KitchenController : MonoBehaviour
     {
         for (int i = 0; i < objectivesCount; i++)
         {
-            var coif = this.rnd.Next(-50, 50);
+            var coif = this.rnd.Next(-30, 30);
             var position = GenerateRandomSpot(spawnArea);
             GameObject.Instantiate(prefab, coif * position.normalized, Quaternion.identity);
         }

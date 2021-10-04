@@ -49,7 +49,6 @@ public class Character : MonoBehaviour
         Dialog.OnDialogEnded += AllowMove;
     }
 
-
     private void OnDisable()
     {
         Dialog.OnDialogStarted -= BanMove;
