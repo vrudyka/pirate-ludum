@@ -27,8 +27,6 @@ public class LostChildScript : MonoBehaviour
 
     private Transform motherAI;
 
-    // UnityEvent m_MyEvent;
-
     private void Start()
     {
         lostChildArea = GameObject.FindGameObjectWithTag("LostChildArea").GetComponent<Collider2D>();
@@ -62,12 +60,6 @@ public class LostChildScript : MonoBehaviour
         {
             this.IsFoud = true;
             chase.ChaseTarget(motherAI, chaseRange);
-            // m_MyEvent.AddListener(Ping);
         }
     }
-
-    //void Ping()
-    //{
-    //    Debug.Log("Ping");
-    //}
 }
