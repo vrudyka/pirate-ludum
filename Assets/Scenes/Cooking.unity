@@ -1568,10 +1568,6 @@ MonoBehaviour:
     obj: {fileID: 1714524324}
   - type: 0
     obj: {fileID: 2127899771}
-  - type: 7
-    obj: {fileID: 0}
-  - type: 6
-    obj: {fileID: 1191843882}
   queueNumber: 0
   holdingObj: {fileID: 0}
   fireSwitch: {fileID: 1714524325}
