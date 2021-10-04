@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 public class BatyaChasing : MonoBehaviour
 {
+    [SerializeField] private GameObject _cursor;
     [SerializeField] private float _chasingSpeed = 0;
+    [SerializeField] private Character _character;
     private Transform _characterTransform;
     private bool _isCanChase = false;
 
@@ -16,6 +19,8 @@ public class BatyaChasing : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _cursor.transform.position = _character.mousePos;
+
         if (_isCanChase)
         {
             if (_characterTransform != null)

@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private GameObject cashier;
     [SerializeField] private Sprite cashierAngry;
+    [SerializeField] private GameObject cursor;
 
     public bool _isCanBeShoot;
 
@@ -47,6 +48,9 @@ public class Ball : MonoBehaviour
 
     private void LateUpdate()
     {
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursor.transform.position = mousePos;
+
         if (_isCanBeShoot)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
