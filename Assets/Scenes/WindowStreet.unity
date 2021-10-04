@@ -402,7 +402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1188706338}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1644245661
 SpriteRenderer:
@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -8.4
       objectReference: {fileID: 0}
+    - target: {fileID: 3885032442134949984, guid: 30c2316caa9561643832b75a1d0743da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5973993320384365408, guid: 30c2316caa9561643832b75a1d0743da, type: 3}
       propertyPath: m_Name
       value: Map
@@ -540,6 +544,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5973993320384365411, guid: 30c2316caa9561643832b75a1d0743da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6025331262414665271, guid: 30c2316caa9561643832b75a1d0743da, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6382463044633113440, guid: 30c2316caa9561643832b75a1d0743da, type: 3}

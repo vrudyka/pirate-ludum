@@ -1628,58 +1628,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1577029783753103995, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907598868357, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907598868357, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907631939166, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907631939166, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907642657362, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907715070140, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134907715070140, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134908123312912, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134908123312912, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134908646479130, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134908737335256, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1754134909001048631, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8535579343836712850, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1727,14 +1675,6 @@ PrefabInstance:
     - target: {fileID: 8535579343836712851, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
       propertyPath: m_Name
       value: BeerContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8911066507206393427, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8911066507206393427, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96c9f45b0931fb40a110d8f85885aee, type: 3}
