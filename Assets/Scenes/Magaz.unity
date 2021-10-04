@@ -1232,11 +1232,11 @@ PrefabInstance:
       objectReference: {fileID: 1599200391}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
-      value: 500
+      value: 475
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.y
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.z
@@ -3956,11 +3956,11 @@ PrefabInstance:
       objectReference: {fileID: 1674493421}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.x
-      value: 500
+      value: 475
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.y
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 500423221983876960, guid: e56b5472ba15a6b4a934084b58e625bf, type: 3}
       propertyPath: _dialogCloudPosition.z
